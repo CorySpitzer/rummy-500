@@ -1,33 +1,19 @@
 #  rummy500.rb
 #  A version of the rumy 500 card game 
 
-class Deck
-    def initialize()
-        #
-    end
-end
-    
-class Card
-    def initialize(suit, rank, score)
-        #@suit = suit
-        #@rank = rank
-    end
+def turn_loop()
+    #
 end
 
-class Discard
-    def initialize()
-        #
-    end
+
+## ---- Main ----
+
+deck = Deck.new
+deck.shuffle(7)
+deck.deal(13)
+
+while playing? == true do
+    # turn_loop
 end
 
-class Hand
-    def initialize()
-        #
-    end
-end
 
-class Melds
-    def initialize(owner, top, bottom)
-        #
-    end
-end
