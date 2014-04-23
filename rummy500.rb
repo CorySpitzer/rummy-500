@@ -1,5 +1,3 @@
-#  rummy500.rb
-#  A version of the rumy 500 card game 
 
 def turn_loop()
     #
