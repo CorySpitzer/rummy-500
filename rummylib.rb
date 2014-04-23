@@ -51,13 +51,20 @@ end
 
 class Melds
     def initialize(owner, top, bottom)
-        #
+        @owner = owner
+        @top = top
+        @bottom = bottom
+        if (@top == @bottom)
+            @type = 'group' # 3 or 4 of a kind
+        else
+            @type = 'run'
+        end
     end
 end
 
 class Player
     def initialize()
-        #
+        @points = 0
     end
     
     def take_turn(where_to_draw?)
@@ -66,8 +73,20 @@ class Player
         # 1 to n=DiscardPile.length to indicate where in the discard 
         # pile to draw from, 1 is the top card and n is the bottom
         self.draw(where_to_draw?)
-        if where_to_draw == 0
-        
+        if (where_to_draw == 0)
+            self.draw_card
+        else
+            self.pick_up_discard(where_to_draw?)
         end
+    end
+    
+    def pick_up_discard(where_to_draw?)
+        # called by the take_turn method
+        # see its docs
+        # reusing the variable name from said method
+    end
+    
+    def draw_card()
+        #
     end
 end
