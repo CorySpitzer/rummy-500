@@ -4,3 +4,7 @@
 
  rummy500.rb runs the game
  rummylib.rb contains Class definitions
+ 
+ The rules of Rummy 500 may be found at en.wikipedia.org/wiki/500_rum
+ 
+ 

@@ -54,3 +54,20 @@ class Melds
         #
     end
 end
+
+class Player
+    def initialize()
+        #
+    end
+    
+    def take_turn(where_to_draw?)
+        # takes a integer
+        # 0 for drawing from the deck
+        # 1 to n=DiscardPile.length to indicate where in the discard 
+        # pile to draw from, 1 is the top card and n is the bottom
+        self.draw(where_to_draw?)
+        if where_to_draw == 0
+        
+        end
+    end
+end
