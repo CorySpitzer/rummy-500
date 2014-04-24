@@ -32,14 +32,21 @@ end
     
 class Card
     def initialize(suit, rank, score)
-        #@suit = suit
-        #@rank = rank
+        @suit = suit
+        @rank = rank
     end
+    
+    # getter and setter
+    
 end
 
 class DiscardPile
     def initialize()
         #
+    end
+    
+    def display()
+        # print the discard pile to the screen
     end
 end
 
@@ -50,8 +57,10 @@ class Hand
 end
 
 class Melds
-    def initialize(owner, top, bottom)
+    def initialize(owner, cards)
         @owner = owner
+        @cards = cards #list
+        
         @top = top
         @bottom = bottom
         if (@top == @bottom)
@@ -59,6 +68,11 @@ class Melds
         else
             @type = 'run'
         end
+    end
+    
+    def evalulate()
+        # return points for the meld
+        for 
     end
 end
 
