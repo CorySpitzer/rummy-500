@@ -1,4 +1,7 @@
 # test.rb
 # for testing various Classes, methods, and functions
 
-require rummylib.rb
+require_relative 'rummylib'
+
+ace = Card.new("clubs", 14)
+p ace
