@@ -3,6 +3,8 @@
 
 
 class Deck
+    attr_accessor :size 
+
     def initialize(size)
         @size = size
     end
@@ -31,13 +33,13 @@ class Deck
 end
     
 class Card
+    attr_reader :rank :suit
+
     def initialize(suit, rank, score)
         @suit = suit
         @rank = rank
     end
-    
-    # getter and setter
-    
+
 end
 
 class DiscardPile
@@ -51,29 +53,38 @@ class DiscardPile
 end
 
 class Hand
-    def initialize()
-        #
+    attr_accessor :size
+
+    def initialize(size)
+        @size = size
     end
 end
 
 class Melds
+    attr_reader :owner :type
+    attr_accessor :cards :top :bottom :points :size
+
+    def evalulate()
+        # return points for the meld
+        #for 
+    end
+
     def initialize(owner, cards)
         @owner = owner
-        @cards = cards #list
-        
-        @top = top
-        @bottom = bottom
-        if (@top == @bottom)
-            @type = 'group' # 3 or 4 of a kind
+        @cards = cards #an ordered list
+        @top = cards[-1]
+        @bottom = cards[0]
+        @points = self.evalulate()
+        @size = cards.length
+        if (@top == @bottom and @size > 1)
+            @type = 'of-a-kind' # 3 or 4 of a kind
+        elsif (size == 1)
+            @type = 'add-on'
         else
             @type = 'run'
         end
     end
-    
-    def evalulate()
-        # return points for the meld
-        for 
-    end
+
 end
 
 class Player
